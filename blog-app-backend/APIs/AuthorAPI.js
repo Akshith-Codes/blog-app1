@@ -5,7 +5,7 @@ import { verifyToken } from "../middlewares/VerifyToken.js";
 export const authorApp = exp.Router();
 
 //Write article (protected route)
-authorApp.post("/articles", verifyToken("AUTHOR"), async (req, res) => {
+authorApp.post("/article", verifyToken("AUTHOR"), async (req, res) => {
   //get articleObj from client
   const articleObj = req.body;
   //get user from decoded token
